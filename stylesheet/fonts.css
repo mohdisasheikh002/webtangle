@@ -1,0 +1,99 @@
+@font-face {
+  font-family: neueLight;
+  src: url("/fonts/NeueMontreal-Light.otf");
+}
+
+@font-face {
+  font-family: neueRegular;
+  src: url("/fonts/NeueMontreal-Regular.otf");
+}
+
+@font-face {
+  font-family: neueMedium;
+  src: url("/fonts/NeueMontreal-Medium.otf");
+}
+
+@font-face {
+  font-family: neueBold;
+  src: url("/fonts/NeueMontreal-Bold.otf");
+}
+
+.fs1 {
+  font-size: 14vmax;
+  font-family: neueRegular;
+  font-weight: 500;
+  line-height: 13vmax;
+  color: #121212;
+}
+
+.fs2 {
+  font-size: 6vmax;
+  line-height: 6vmax;
+  font-family: neueRegular;
+  font-weight: 600;
+  color: #121212;
+}
+
+.fs3 {
+  font-size: 3.5vmax;
+  font-family: neueRegular;
+  font-weight: 500;
+  letter-spacing: 0.05vmax;
+  color: #121212;
+}
+
+.fs4 {
+  font-size: 1.5vmax;
+  font-family: neueRegular;
+  font-weight: 500;
+  letter-spacing: 0.05vmax;
+  color: #121212;
+}
+
+.fs5 {
+  font-size: 1vmax;
+  font-family: neueRegular;
+  font-weight: 500;
+  letter-spacing: 0.05vmax;
+  color: #121212;
+}
+
+.fs6 {
+  font-size: 0.8vmax;
+  font-family: neueRegular;
+  font-weight: 500;
+  letter-spacing: 0.05vmax;
+  color: #121212;
+}
+
+@media (max-width: 30cm) {
+  .fs2 {
+    font-size: 8vmax;
+    line-height: 8vmax;
+    letter-spacing: 0.1vmax;
+  }
+
+  .fs4 {
+    font-size: 3vmax;
+    letter-spacing: 0.1vmax;
+  }
+
+  .fs5 {
+    font-size: 1.5vmax;
+    letter-spacing: 0.1vmax;
+  }
+
+  .fs6 {
+    font-size: 1.2vmax;
+
+    letter-spacing: 0.1vmax;
+  }
+}
+
+@media (max-width: 15cm) {
+  .fs1 {
+    font-size: 9.2vmax;
+    line-height: 9.2vmax;
+    color: #121212;
+  }
+}
