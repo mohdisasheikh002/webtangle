@@ -1,4 +1,4 @@
-@import "../font.css";
+@import "../fonts.css";
 
 * {
   margin: 0;
@@ -30,10 +30,12 @@ body {
 
   h4 {
     cursor: pointer;
-    color: #fff;
-    background-color: #14cf93;
-    padding: 0.5vmax 1vmax;
-    border-radius: 0.5vmax;
+    color: #000;
+    letter-spacing: normal;
+
+    span {
+      color: #14cf93;
+    }
   }
 
   .linkbox {
@@ -72,7 +74,7 @@ body {
 @media (max-width: 30cm) {
   .nav {
     height: 0;
-    padding: 4.5vmax 2vmax;
+    padding: 3.5vmax 2vmax;
 
     .linkbox {
       display: none;
@@ -154,12 +156,12 @@ body {
       p {
         line-height: 1.5vmax;
         margin-top: 1.5vmax;
-        width: 90%;
+        width: 85%;
       }
 
       button {
         width: 9vmax;
-        padding: 0.8vmax 0;
+        padding: 0.9vmax 0;
         background-color: #14cf93;
         color: #fff;
         border-radius: 0.5vmax;
@@ -177,8 +179,8 @@ body {
       .blob {
         position: absolute;
         top: 7%;
-        height: 130%;
-        width: 130%;
+        height: 140%;
+        width: 140%;
         animation-name: ani-float;
         animation-duration: 3s;
         animation-iteration-count: infinite;
@@ -192,6 +194,7 @@ body {
         transform: translateX(-50%);
         z-index: 988;
         height: 90%;
+        width: 90%;
         object-fit: contain;
       }
 
@@ -219,23 +222,39 @@ body {
         margin-top: 10vmax;
 
         p {
-          line-height: 2vmax;
-          margin-top: 1.5vmax;
+          line-height: 2.3vmax;
+          margin-top: 2vmax;
           width: 70%;
         }
 
         button {
           width: 15vmax;
           padding: 1.6vmax 0;
+          margin-top: 3vmax;
         }
       }
 
       .right {
         position: absolute;
-        padding-right: 2vmax;
+        bottom: 0%;
+        height: 50%;
+        width: 100%;
+
+        .blob {
+          top: 14%;
+        }
 
         .character {
-          height: 40%;
+          height: 160%;
+          transform: translateX(none);
+          right: 0;
+          bottom: -20%;
+        }
+
+        .skinbox {
+          top: 46%;
+          height: 7vmax;
+          width: 10vmax;
         }
       }
     }
@@ -243,26 +262,39 @@ body {
 
   @media (max-width: 15cm) {
     .sec1 {
-      align-items: flex-end;
+      align-items: flex-start;
+      padding: 0 2.5vmax;
 
       .left {
-        height: 24vw;
-        width: 60vw;
-        padding-left: 4vw;
-        padding-right: 4vw;
+        margin-top: 8vmax;
+
+        button {
+          width: 15vmax;
+          padding: 1.6vmax 0;
+          margin-top: 3vmax;
+        }
       }
 
       .right {
-        padding-right: 0vw;
-        padding-left: 4vw;
-        margin-bottom: 22vw;
-      }
-    }
-  }
+        .blob {
+          top: 0;
+          left: 80%;
+          transform: translateX(-50%);
+          height: 170%;
+          width: 170%;
+        }
 
-  @media (max-width: 10cm) {
-    .sec1 {
-      align-items: flex-end;
+        .character {
+          height: 52%;
+          right: 0;
+        }
+
+        .skinbox {
+          top: 52%;
+          left: 52%;
+          height: 8vmax;
+        }
+      }
     }
   }
 
@@ -286,9 +318,8 @@ body {
       .elem1 {
         height: fit-content;
 
-        h4 {
-          font-size: 2.4vw;
-          line-height: 3.5vw;
+        h3 {
+          line-height: 3vmax;
           font-weight: 500;
         }
       }

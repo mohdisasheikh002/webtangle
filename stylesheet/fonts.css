@@ -27,15 +27,15 @@
 }
 
 .fs2 {
-  font-size: 6vmax;
-  line-height: 6vmax;
+  font-size: 5.5vmax;
+  line-height: 5.5vmax;
   font-family: neueRegular;
   font-weight: 600;
   color: #121212;
 }
 
 .fs3 {
-  font-size: 3.5vmax;
+  font-size: 2vmax;
   font-family: neueRegular;
   font-weight: 500;
   letter-spacing: 0.05vmax;
@@ -84,8 +84,7 @@
   }
 
   .fs6 {
-    font-size: 1.2vmax;
-
+    font-size: 1.5vmax;
     letter-spacing: 0.1vmax;
   }
 }
