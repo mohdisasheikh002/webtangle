@@ -82,6 +82,14 @@ body {
   .nav {
     height: 0;
     padding: 3.5vmax 2.5vmax;
+
+    .linkbox {
+      button {
+        width: 14vmax;
+        padding: 1.6vmax 0;
+        letter-spacing: 0.08vmax;
+      }
+    }
   }
 }
 
