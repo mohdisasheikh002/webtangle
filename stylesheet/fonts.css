@@ -19,18 +19,19 @@
 }
 
 .fs1 {
-  font-size: 14vmax;
+  font-size: 6vmax;
+  line-height: 6vmax;
   font-family: neueRegular;
-  font-weight: 500;
-  line-height: 13vmax;
+  font-weight: 600;
   color: #121212;
+  letter-spacing: 0.05vmax;
 }
 
 .fs2 {
-  font-size: 5.5vmax;
-  line-height: 5.5vmax;
+  font-size: 2.8vmax;
   font-family: neueRegular;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.05vmax;
   color: #121212;
 }
 
@@ -45,7 +46,7 @@
 .fs4 {
   font-size: 1.5vmax;
   font-family: neueRegular;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05vmax;
   color: #121212;
 }
@@ -67,9 +68,14 @@
 }
 
 @media (max-width: 30cm) {
-  .fs2 {
+  .fs1 {
     font-size: 8vmax;
     line-height: 8vmax;
+    letter-spacing: 0.1vmax;
+  }
+
+  .fs4 {
+    font-size: 5vmax;
     letter-spacing: 0.1vmax;
   }
 

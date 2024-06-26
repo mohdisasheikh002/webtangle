@@ -13,25 +13,22 @@ body {
   overflow-x: hidden;
   background-color: #fff;
   cursor: default;
-  font-family: "Neue Montreal";
 }
 
 /* NAVIGATION CODE */
 
 .nav {
   position: absolute;
-  height: 6vmax;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 99;
-  padding: 0 3vmax;
+  z-index: 999;
+  padding: 1.5vmax 5vmax;
 
   h4 {
     cursor: pointer;
     color: #000;
-    letter-spacing: normal;
 
     span {
       color: #14cf93;
@@ -39,28 +36,38 @@ body {
   }
 
   .linkbox {
+    position: relative;
     height: fit-content;
     width: fit-content;
     display: flex;
     align-items: center;
-    gap: 3vmax;
-
-    a {
-      font-weight: 400;
-      letter-spacing: 0.05vmax;
-      text-decoration: none;
-      color: #121212;
-    }
+    border-radius: 5vmax;
+    background-color: #fff;
 
     button {
-      width: 9vmax;
-      padding: 0.9vmax 0;
-      background-color: #14cf93;
+      width: 8vmax;
+      padding: 0.8vmax 0;
       color: #fff;
-      border-radius: 0.5vmax;
-      border: none;
-      margin-left: 1vmax;
       cursor: pointer;
+      z-index: 99;
+      background-color: transparent;
+      letter-spacing: 0.025vmax;
+      border-radius: 5vmax;
+      border: none;
+
+      &:nth-child(2) {
+        color: #000;
+      }
+    }
+
+    .toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      border-radius: 5vmax;
+      background-color: #14cf93;
     }
   }
 
@@ -138,16 +145,16 @@ body {
     display: flex;
     height: 100vh;
     width: 100%;
-    padding: 0 3vmax;
 
     .left {
       height: 100%;
-      width: 45%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-left: 5vmax;
 
-      h2 {
+      h1 {
         span {
           color: #14cf93;
         }
@@ -157,54 +164,72 @@ body {
         line-height: 1.5vmax;
         margin-top: 1.5vmax;
         width: 85%;
+        opacity: 0.7;
       }
 
-      button {
-        width: 9vmax;
-        padding: 0.9vmax 0;
-        background-color: #14cf93;
-        color: #fff;
-        border-radius: 0.5vmax;
-        border: none;
+      .row {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        align-items: flex-start;
+        gap: 3vmax;
         margin-top: 2vmax;
-        cursor: pointer;
+
+        button {
+          width: 8vmax;
+          padding: 0.8vmax 0;
+          background-color: #14cf93;
+          color: #fff;
+          border-radius: 5vmax;
+          border: none;
+          cursor: pointer;
+          letter-spacing: 0.025vmax;
+        }
+
+        .numbox {
+          h4 {
+            font-weight: 600;
+          }
+
+          h5 {
+            opacity: 0.7;
+          }
+        }
       }
     }
 
     .right {
       position: relative;
       height: 100%;
-      width: 55%;
+      width: 50%;
+      overflow: hidden;
 
-      .blob {
+      .clippy {
+        height: 100%;
+        width: 100%;
+        background-color: #14cf93;
+      }
+
+      .c1 {
         position: absolute;
-        top: 7%;
-        height: 140%;
-        width: 140%;
-        animation-name: ani-float;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
+        top: 0;
+        clip-path: circle(49.8% at 50% 0);
+      }
+
+      .c2 {
+        position: absolute;
+        bottom: 0;
+        clip-path: circle(49.8% at 50% 100%);
       }
 
       .character {
         position: absolute;
-        bottom: 0%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 988;
-        height: 90%;
-        width: 90%;
+        bottom: -1.5%;
+        right: 0%;
+        z-index: 99;
+        height: 105%;
+        width: 105%;
         object-fit: contain;
-      }
-
-      .skinbox {
-        position: absolute;
-        top: 22%;
-        right: 32%;
-        height: 5vmax;
-        width: 8vmax;
-        background-color: #fdd5ae;
       }
     }
   }
@@ -249,12 +274,6 @@ body {
           transform: translateX(none);
           right: 0;
           bottom: -20%;
-        }
-
-        .skinbox {
-          top: 46%;
-          height: 7vmax;
-          width: 10vmax;
         }
       }
     }
@@ -304,8 +323,6 @@ body {
     position: relative;
     height: fit-content;
     width: 100%;
-    padding: 10vw 8vw;
-    padding-top: 8vw;
 
     .row {
       display: flex;
@@ -431,13 +448,8 @@ body {
       width: 100%;
 
       h1 {
-        font-size: 7vw;
-        line-height: 7vw;
-        font-weight: 500;
-
         &:nth-child(2) {
-          color: transparent;
-          -webkit-text-stroke: 1px #121212;
+          color: #14cf93;
         }
       }
     }
@@ -748,7 +760,7 @@ body {
       height: 16vw;
       width: 16vw;
       border-radius: 50%;
-      background-color: #334bd3;
+      background-color: #14cf93;
       z-index: 899;
       margin-bottom: 0.5vw;
       cursor: pointer;
@@ -972,7 +984,7 @@ body {
         height: 16vw;
         width: 16vw;
         border-radius: 50%;
-        background-color: #334bd3;
+        background-color: #14cf93;
         cursor: pointer;
 
         h5 {
@@ -1301,4 +1313,8 @@ body {
       height: 25vh;
     }
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
