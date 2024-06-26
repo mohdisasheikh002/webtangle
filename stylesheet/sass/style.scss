@@ -81,7 +81,7 @@ body {
 @media (max-width: 30cm) {
   .nav {
     height: 0;
-    padding: 3.5vmax 2vmax;
+    padding: 3.5vmax 2.5vmax;
 
     .linkbox {
       display: none;
@@ -238,13 +238,14 @@ body {
 
   @media (max-width: 30cm) {
     .sec1 {
+      flex-direction: column;
       align-items: flex-start;
-      padding: 0 2.5vmax;
 
       .left {
-        height: fit-content;
+        height: 55%;
         width: 100%;
-        margin-top: 10vmax;
+        padding-left: 2.5vmax;
+        padding-top: 4.5vmax;
 
         p {
           line-height: 2.3vmax;
@@ -252,17 +253,22 @@ body {
           width: 70%;
         }
 
-        button {
-          width: 15vmax;
-          padding: 1.6vmax 0;
-          margin-top: 3vmax;
+        .row {
+          button {
+            width: 14vmax;
+            padding: 1.6vmax 0;
+            background-color: #14cf93;
+            color: #fff;
+            border-radius: 5vmax;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.08vmax;
+          }
         }
       }
 
       .right {
-        position: absolute;
-        bottom: 0%;
-        height: 50%;
+        height: 45%;
         width: 100%;
 
         .blob {
