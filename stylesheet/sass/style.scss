@@ -82,14 +82,6 @@ body {
   .nav {
     height: 0;
     padding: 3.5vmax 2.5vmax;
-
-    .linkbox {
-      display: none;
-    }
-
-    .menubtn {
-      display: initial;
-    }
   }
 }
 
@@ -254,6 +246,8 @@ body {
         }
 
         .row {
+          margin-top: 3vmax;
+
           button {
             width: 14vmax;
             padding: 1.6vmax 0;
@@ -264,6 +258,12 @@ body {
             cursor: pointer;
             letter-spacing: 0.08vmax;
           }
+
+          .numbox {
+            h5 {
+              margin-top: 0.2vmax;
+            }
+          }
         }
       }
 
@@ -271,15 +271,36 @@ body {
         height: 45%;
         width: 100%;
 
-        .blob {
-          top: 14%;
+        .clippy {
+          height: 50%;
+          width: 100%;
+          background-color: #14cf93;
+        }
+
+        .c1 {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          clip-path: circle(49.8% at 50% 0);
+        }
+
+        .c2 {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          clip-path: circle(49.8% at 50% 100%);
         }
 
         .character {
-          height: 160%;
-          transform: translateX(none);
-          right: 0;
-          bottom: -20%;
+          position: absolute;
+          bottom: -1.5%;
+          right: 0%;
+          z-index: 99;
+          height: 105%;
+          width: 105%;
+          object-fit: contain;
         }
       }
     }

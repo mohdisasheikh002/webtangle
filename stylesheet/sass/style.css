@@ -75,12 +75,6 @@ body {
     height: 0;
     padding: 3.5vmax 2.5vmax;
   }
-  .nav .linkbox {
-    display: none;
-  }
-  .nav .menubtn {
-    display: initial;
-  }
 }
 /* MENU BOX CODE */
 .menu-box {
@@ -234,6 +228,9 @@ body {
     margin-top: 2vmax;
     width: 70%;
   }
+  .wrapper .sec1 .left .row {
+    margin-top: 3vmax;
+  }
   .wrapper .sec1 .left .row button {
     width: 14vmax;
     padding: 1.6vmax 0;
@@ -244,18 +241,43 @@ body {
     cursor: pointer;
     letter-spacing: 0.08vmax;
   }
+  .wrapper .sec1 .left .row .numbox h5 {
+    margin-top: 0.2vmax;
+  }
   .wrapper .sec1 .right {
     height: 45%;
     width: 100%;
   }
-  .wrapper .sec1 .right .blob {
-    top: 14%;
+  .wrapper .sec1 .right .clippy {
+    height: 50%;
+    width: 100%;
+    background-color: #14cf93;
+  }
+  .wrapper .sec1 .right .c1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-clip-path: circle(49.8% at 50% 0);
+            clip-path: circle(49.8% at 50% 0);
+  }
+  .wrapper .sec1 .right .c2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-clip-path: circle(49.8% at 50% 100%);
+            clip-path: circle(49.8% at 50% 100%);
   }
   .wrapper .sec1 .right .character {
-    height: 160%;
-    transform: translateX(none);
-    right: 0;
-    bottom: -20%;
+    position: absolute;
+    bottom: -1.5%;
+    right: 0%;
+    z-index: 99;
+    height: 105%;
+    width: 105%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (max-width: 15cm) {
